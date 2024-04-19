@@ -26,6 +26,7 @@ class ListSessions extends Request
         foreach ($response->json()['content'] as $sessions) {
             $sessions[] = Session::fromJson($sessions);
         }
+
         return $sessions;
     }
 }

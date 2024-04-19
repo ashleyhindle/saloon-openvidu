@@ -10,13 +10,14 @@ use Saloon\Http\Response;
 class GetSession extends Request
 {
     protected Method $method = Method::GET;
+
     public function __construct(protected string $sessionId)
     {
     }
 
     public function resolveEndpoint(): string
     {
-        return '/sessions/' . $this->sessionId;
+        return '/sessions/'.$this->sessionId;
     }
 
     public function createDtoFromResponse(Response $response): Session

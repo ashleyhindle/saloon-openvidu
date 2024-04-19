@@ -58,7 +58,7 @@ class Session
         $session->id = $data['id'];
         $session->customSessionId = $data['customSessionId'];
         $session->object = $data['object'];
-        $session->createdAt = new \DateTime('@' . (string) $data['createdAt']/1000);
+        $session->createdAt = new \DateTime('@'.(string) $data['createdAt'] / 1000);
         $session->mediaMode = $data['mediaMode'];
         $session->recordingMode = $data['recordingMode'];
         $session->forcedVideoCodec = $data['forcedVideoCodec'];
