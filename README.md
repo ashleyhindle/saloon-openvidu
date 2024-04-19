@@ -1,8 +1,8 @@
 # Saloon SDK for OpenVidu
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/ashleyhindle/saloon-openvidu.svg?style=flat-square)](https://packagist.org/packages/ashleyhindle/saloon-openvidu)
-[![Tests](https://img.shields.io/github/actions/workflow/status/ashleyhindle/saloon-openvidu/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/ashleyhindle/saloon-openvidu/actions/workflows/run-tests.yml)
-[![Total Downloads](https://img.shields.io/packagist/dt/ashleyhindle/saloon-openvidu.svg?style=flat-square)](https://packagist.org/packages/ashleyhindle/saloon-openvidu)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/flourishlabs/saloon-openvidu.svg?style=flat-square)](https://packagist.org/packages/ashleyhindle/saloon-openvidu)
+[![Tests](https://img.shields.io/github/actions/workflow/status/flourishlabs/saloon-openvidu/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/ashleyhindle/saloon-openvidu/actions/workflows/run-tests.yml)
+[![Total Downloads](https://img.shields.io/packagist/dt/flourishlabs/saloon-openvidu.svg?style=flat-square)](https://packagist.org/packages/ashleyhindle/saloon-openvidu)
 
 This is where your description should go. Try and limit it to a paragraph or two. Consider adding a small example.
 
@@ -19,14 +19,26 @@ We highly appreciate you sending us a postcard from your hometown, mentioning wh
 You can install the package via composer:
 
 ```bash
-composer require ashleyhindle/saloon-openvidu
+composer require flourishlabs/saloon-openvidu
 ```
 
 ## Usage
 
 ```php
-$skeleton = new AshleyHindle\SaloonOpenvidu();
-echo $skeleton->echoPhrase('Hello, AshleyHindle!');
+use Flourishlabs\SaloonOpenvidu\OpenVidu;
+use Flourishlabs\SaloonOpenvidu\Requests\GetConfig;
+
+$openvidu = new OpenVidu('openvidu_secret', 'https://openvidu.example.com');
+
+$config = $openvidu
+    ->send(new Getconfig())
+    ->json();
+
+/*
+array(22) {
+  ["VERSION"]=>
+  string(6) "2.29.0"
+ */
 ```
 
 ## Testing

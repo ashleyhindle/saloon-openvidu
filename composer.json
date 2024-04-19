@@ -1,11 +1,14 @@
 {
-    "name": "ashleyhindle/saloon-openvidu",
+    "name": "flourishlabs/saloon-openvidu",
     "description": "Saloon SDK for OpenVidu",
     "keywords": [
         "ashleyhindle",
+        "flourishlabs",
+        "OpenVidu",
+        "saloon",
         "saloon-openvidu"
     ],
-    "homepage": "https://github.com/ashleyhindle/saloon-openvidu",
+    "homepage": "https://github.com/flourishlabs/saloon-openvidu",
     "license": "MIT",
     "authors": [
         {
@@ -15,7 +18,8 @@
         }
     ],
     "require": {
-        "php": "^8.1"
+        "php": "^8.1",
+        "saloonphp/saloon": "^3.0"
     },
     "require-dev": {
         "pestphp/pest": "^2.20",
@@ -24,12 +28,12 @@
     },
     "autoload": {
         "psr-4": {
-            "AshleyHindle\\SaloonOpenvidu\\": "src"
+            "FlourishLabs\\SaloonOpenVidu\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "AshleyHindle\\SaloonOpenvidu\\Tests\\": "tests"
+            "FlourishLabs\\SaloonOpenVidu\\Tests\\": "tests"
         }
     },
     "scripts": {
